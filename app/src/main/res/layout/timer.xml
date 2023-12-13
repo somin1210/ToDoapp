@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:text="기록"
+                    android:text="record"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:textSize="22dp" />
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:text="메모"
+                    android:text="memo"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:textSize="22dp" />
@@ -147,7 +147,7 @@
                     android:layout_marginLeft="15dp"
                     android:privateImeOptions="defaultInputmode=korean"
                     android:gravity="center_vertical"
-                    android:hint="기록을 저장해보세요"
+                    android:hint="enter memo"
                     />
 
 
@@ -164,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="325dp"
                 android:background="#B0C4DE "
-                android:text="저장하기"
+                android:text="save"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -179,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="325dp"
                 android:background="#B0C4DE "
-                android:text="기록보기"
+                android:text="record"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
