@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">ToDoapp</string>
+    <string name="create_new_note">Create New Note</string>
+    <string name="note_title">Title Note</string>
+    <string name="enter_your_note_or_images">Enter your note or images</string>
+    <string name="please_enter_title_note">Please enter title note!</string>
+    <string name="please_enter_content_note">Please enter content note!</string>
+    <string name="new_note_created_successfully">New note created successfully</string>
+    <string name="characters_format">%d characters</string>
+    <string name="all_my_note">All My Notes</string>
+    <string name="txt_action_cancel">Cancel</string>
+    <string name="txt_action_delete">Delete</string>
+    <string name="txt_there_are_no_items_to_show">There are no items to show</string>
+    <string name="txt_are_you_sure_want_to_clear_all_data">Are you sure want to clear all data?</string>
+    <string name="txt_are_you_sure_want_to_delete_this_item">Are you sure want to delete this item?</string>
+    <string name="txt_delete_note_success">Your note has been deleted!</string>
+    <string name="txt_clear_all">Clear All</string>
+    <string name="txt_clear_all_data_success">You has been clear all data!</string>
+    <string name="detail_note">Detail Note</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="this_note_has_been_updated_success">This note has been updated!</string>
 </resources>

@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.ToDoapp" parent="Base.Theme.ToDoapp" />
+
+    <style name="ThemeCreateNewNote" parent="Theme.AppCompat.Light.NoActionBar"/>
 </resources>

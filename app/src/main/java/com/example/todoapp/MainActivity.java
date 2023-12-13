@@ -2,7 +2,9 @@ package com.example.todoapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
@@ -10,32 +12,35 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton imageButton;
+    private ImageButton imageButton, btnListNote, btnCreateNewNote, weatherButton;
     public String readDay = null;
     public CalendarView calendarView;
     public TextView diaryTextView, textView2, textView3;
 
-
-
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         calendarView = findViewById(R.id.calendarView);
         diaryTextView = findViewById(R.id.diaryTextView);
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
+
+        weatherButton = findViewById(R.id.weatherbutton);
+
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickUrl(view);
+            }
+        });
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -51,12 +56,43 @@ public class MainActivity extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent1 = new Intent(getApplicationContext(), timer.class);
-
                 startActivity(intent1);
             }
         });
+
+        //button view list note
+        btnListNote = findViewById(R.id.btnListNote);
+        btnListNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoListNoteActivity();
+            }
+        });
+
+        //button create new note
+        btnCreateNewNote = findViewById(R.id.btnCreateNewNote);
+        btnCreateNewNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoCreateNewNoteActivity();
+            }
+        });
+    }
+
+    private void gotoListNoteActivity() {
+        startActivity(new Intent(MainActivity.this, ListNoteActivity.class));
+    }
+
+    private void gotoCreateNewNoteActivity() {
+        startActivity(new Intent(MainActivity.this, CreateNewNoteActivity.class));
+    }
+
+    public void clickUrl(View view) {
+        String url = "https://www.weather.go.kr/w/index.do";
+        Log.d("MainActivity", "Opening URL: " + url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     public void checkDay(int cYear, int cMonth, int cDay) {
@@ -80,5 +116,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-}}
+    }
+}

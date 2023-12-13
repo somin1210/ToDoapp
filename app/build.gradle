@@ -29,11 +29,20 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //permission read storage to pick image for note
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    //pick image and add to note
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    //rich text: can add image and text to note
+    implementation 'com.github.huzhenjie:RichTextEditor:1.0.4'
+    //event for refresh data
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    //use gson to convert object to json string
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
