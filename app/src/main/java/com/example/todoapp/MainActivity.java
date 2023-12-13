@@ -17,7 +17,7 @@ import java.io.FileInputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton imageButton, btnListNote, btnCreateNewNote, weatherButton;
+    private ImageButton imageButton, btnListNote, btnCreateNewNote, weatherButton, checklistbutton;
     public String readDay = null;
     public CalendarView calendarView;
     public TextView diaryTextView, textView2, textView3;
@@ -51,13 +51,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 체크리스트 화면 연결
+        imageButton = findViewById(R.id.checklistbutton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(), ChecklistActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+
         // 타이머 화면 연결
         imageButton = findViewById(R.id.timerbutton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(getApplicationContext(), timer.class);
-                startActivity(intent1);
+                Intent intent2 = new Intent(getApplicationContext(), timer.class);
+                startActivity(intent2);
             }
         });
 

@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChecklistActivity"/>
         <activity android:name="com.example.todoapp.timer" />
         <activity android:name="com.example.todoapp.record_check" />
         <activity
